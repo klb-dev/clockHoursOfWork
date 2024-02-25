@@ -45,7 +45,7 @@ main{
 }
 
 h1{
-    margin: 0;
+    margin-top: 5rem;
     border-bottom: 2px solid hsl(0, 1%, 26%);
     text-transform: uppercase;
     color: hsl(0, 1%, 26%);
@@ -108,20 +108,24 @@ h1{
 }
 
 .hour {
-    max-width: 40%;
+    max-width: 80%;
     font-size: 1.5rem;
     text-align: center;
     color: hsl(0, 1%, 26%);
-    margin-bottom: 5rem;
 }
 
-.add-btn {
-    background: none;
+.btn-add {
+    align-self: flex-end;
     font-size: .75rem;
     border: none;
-    background-color: hsl(240, 79%, 44%);
+    background-color:transparent;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.btn-add:hover,
+.btn-add:focus {
+    filter: drop-shadow(1px 1px 3px hsl(0, 1%, 26%)) contrast(5);
 }
 
 /* module */
@@ -134,8 +138,9 @@ section {
 form {
     position: absolute;
     top: 30%;
-    left: 18%;
-    width: 50%;
+    left: 12%;
+    width: 60%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -164,6 +169,10 @@ label {
     width: 100%;
 }
 
+#hours {
+    width: 50%;
+}
+
 .hour-btn-container {
     display: flex;
     justify-content: space-between;
@@ -174,7 +183,7 @@ label {
 
 #add-hours,
 #minus-hours {
-    width: 30%;
+    width: 40%;
     padding: .5rem 1rem;
     font-size: 2rem;
     border: none;
@@ -196,6 +205,33 @@ input::-webkit-outer-spin-button {
     margin: 0;
 }   
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
 
+.cancel,
+.submit {
+    width: 50%;
+    margin-top: 2rem;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    color: hsl(240, 100%, 98%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}   
+
+.cancel {
+    background-color: hsl(0, 53%, 58%);
+}
+
+.submit {
+    background-color: hsl(130, 91%, 25%);
+}
 
 

@@ -26,8 +26,8 @@
             <button id="btn-stop-animation" class="btn-stop-animation">Stop Animation</button>
         </div>
         <p class="hour" id="hour">You haven't logged any hours yet</p>
-
-        <img src="images/plus.svg" alt="" id="btn-add" class="btn-add">
+        <button id="btn-add" class="btn-add"><img src="images/plus.svg" alt="Light blue/purple button with '+' symbol inside"  class="add-btn"></button>
+        
     </main>
 
     <section id="form-container">
@@ -36,7 +36,7 @@
             <input type="date" id="date" name="date" required>
             <label for="description">Select hour type</label>
             <select name="hour-type" id="hour-type">
-                <option value="">Pick hours</option>
+                <option value="">Pick type of hours</option>
                 <option value="normal">Regular</option>
                 <option value="overtime">Overtime</option>
                 <option value="break">Breaks</option>
@@ -46,8 +46,10 @@
             <button id="add-hours">+</button>
             <button id="minus-hours">-</button>
             </div>
-            <button id="cancel">Cancel</button>
-            <button id="submit">Save</button>
+            <div class="button-container">
+                <button id="cancel" class="cancel">Cancel</button>
+                <button id="submit" class="submit">Save</button>
+            </div>
         </form>
     </section>
 
