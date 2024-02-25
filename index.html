@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/9c30a36023.css" crossorigin="anonymous">
+    <title>Log hours</title>
+</head>
+<body>
+    <header>
+        <nav id="nav-container">
+            <ul class="list-container">
+                <li class="list-item"><a href="index.html"><img src="images/reply-arrow.svg" alt="Back arrow" id="reply-arrow"></a></li>
+                <li class="list-item"><a href="index.html"><img src="images/search.svg" alt="Search magnify glass" id="search"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Your Hours</h1>
+        <div class="clock-container">
+                <img src="images/alarm-clock.svg" alt="" class="alarm-clock" id="alarm-clock">
+            <button id="btn-stop-animation" class="btn-stop-animation">Stop Animation</button>
+        </div>
+        <p class="hour" id="hour">You haven't logged any hours yet</p>
+
+        <img src="images/plus.svg" alt="" id="btn-add" class="btn-add">
+    </main>
+
+    <section id="form-container">
+        <form action="submit">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+            <label for="description">Select hour type</label>
+            <select name="hour-type" id="hour-type">
+                <option value="">Pick hours</option>
+                <option value="normal">Regular</option>
+                <option value="overtime">Overtime</option>
+                <option value="break">Breaks</option>
+            </select>
+            <div class="hour-btn-container">
+                <input type="number" id="hours" name="hours" min="1" max="24" placeholder="0" class="no-arrows">
+            <button id="add-hours">+</button>
+            <button id="minus-hours">-</button>
+            </div>
+            <button id="cancel">Cancel</button>
+            <button id="submit">Save</button>
+        </form>
+    </section>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>

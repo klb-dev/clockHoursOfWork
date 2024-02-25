@@ -1,0 +1,201 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(66, 18%, 78%);
+    max-width: 31.25rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* nav/header */
+
+header{
+    background-color: hsl(240, 79%, 44%);
+    box-shadow: 0 10px 10px hsl(240, 31.15%, 76.08%);
+    border-radius: 10px 10px 0 0;
+}
+
+.list-container {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    padding: .5rem 2rem;
+}
+
+.list-container li a {
+    text-decoration: none;
+    color: hsl(240, 100%, 98%);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* main */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 6rem;
+}
+
+h1{
+    margin: 0;
+    border-bottom: 2px solid hsl(0, 1%, 26%);
+    text-transform: uppercase;
+    color: hsl(0, 1%, 26%);
+    letter-spacing: .15rem;
+}
+
+.clock-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.alarm-clock{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: hsl(240, 79%, 44%);
+    font-size: 15.625rem;
+    margin: 2rem auto;
+    text-align: center;
+    text-shadow: 2px 2px 4px hsl(240, 6%, 44%);
+    animation: shakeClock 1s infinite;
+}
+
+@keyframes shakeClock {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.clock-question{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.clock-container button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: .75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(240, 79%, 44%);
+    color: hsl(240, 100%, 98%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clock-container button:hover {
+    background-color: hsla(240, 79%, 34%, .55);
+}
+
+.hour {
+    max-width: 40%;
+    font-size: 1.5rem;
+    text-align: center;
+    color: hsl(0, 1%, 26%);
+    margin-bottom: 5rem;
+}
+
+.add-btn {
+    background: none;
+    font-size: .75rem;
+    border: none;
+    background-color: hsl(240, 79%, 44%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* module */
+
+section {
+    display: none;
+    height: 100%;
+}
+
+form {
+    position: absolute;
+    top: 30%;
+    left: 18%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color:hsl(240, 100%, 98%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 1.5rem;
+    color: hsl(0, 1%, 26%);
+    margin: 1rem 0 0 0;
+}
+
+#date,
+#hour-type,
+#hours {
+    margin: 1rem 0;
+    padding: 1rem .5rem;
+    border: 2px solid hsl(240, 79%, 44%);
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.hour-btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+#add-hours,
+#minus-hours {
+    width: 30%;
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(240, 79%, 44%);
+    color: hsl(240, 100%, 98%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}   
+
+input[type=number] {
+    appearance: none;
+    -moz-appearance: textfield ;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}   
+
+
+
+
